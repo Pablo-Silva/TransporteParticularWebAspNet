@@ -1,0 +1,29 @@
+appsetings.json = colocar a string de conecxao
+MyDbContext.cs = colocar a string de conecxao
+OBS: a string esta sem senha pois o meu banco nao possui uma senha
+
+Para testar utilizar o inserte da pasta DataBaseScript
+
+Como ainda nao coloquei botoes para acessar as paginas seguir os passos.
+Links
+Cliente = > 
+ClienteTables/Create
+ClienteTables/Edit
+ClienteTables/Delete
+ClienteTables/Index
+ClienteTables/Details
+
+Motorista = >
+Motorista/Create
+Motorista/Edit
+Motorista/Delete
+Motorista/Index
+Motorista/Details           
+
+Viagens = >
+ViagensTables/Create
+ViagensTables/Edit
+ViagensTables/Delete
+ViagensTables/Index
+ViagensTables/Details
+
