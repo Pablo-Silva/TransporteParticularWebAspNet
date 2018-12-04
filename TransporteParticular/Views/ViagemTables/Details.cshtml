@@ -1,0 +1,55 @@
+﻿@model TransporteParticular.Models.ViagemTable
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalhes da Viagem</h2>
+
+<div>
+    <h4>Dados da Viagem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Cliente:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdClienteNavigation.NomeCliente)
+        </dd>
+        <dt>
+            Motorista:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdMotoristaNavigation.NomeMotorista)
+        </dd>
+        <dt>
+            Endereco Saida:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoSaida)
+        </dd>
+        <dt>
+            Endereco Chegada:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoChegada)
+        </dd>
+        <dt>
+            Data Inicio:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataInicio)
+        </dd>
+        <dt>
+            Data Fim:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataFim)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.IdViagem">Editar</a> |
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+</div>

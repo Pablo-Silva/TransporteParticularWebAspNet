@@ -1,0 +1,58 @@
+﻿@model TransporteParticular.Models.ViagemTable
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Deletar</h2>
+
+<h3>Voce realmente deseja deletar esta viagem?</h3>
+<div>
+    <h4>Dados da Viagem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Cliente:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdClienteNavigation.NomeCliente)
+        </dd>
+        <dt>
+            Motorista:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdMotoristaNavigation.NomeMotorista)
+        </dd>
+        <dt>
+            Endereco Saida:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoSaida)
+        </dd>
+        <dt>
+            Endereco Chegada:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EnderecoChegada)
+        </dd>
+        <dt>
+            Data Inicio:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataInicio)
+        </dd>
+        <dt>
+            Data Fim:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataFim)
+        </dd>
+
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdViagem" />
+        <input type="submit"  value="Deletar" class="btn btn-danger" /> |
+        <a class="btn btn-primary" asp-action="Index">Voltar</a>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+﻿@model TransporteParticular.Models.VeiculoTable
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VeiculoTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ModeloVeiculo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModeloVeiculo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MarcaVeiculo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MarcaVeiculo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFabricacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataFabricacao)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdVeiculo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

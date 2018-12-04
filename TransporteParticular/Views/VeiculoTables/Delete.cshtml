@@ -1,0 +1,39 @@
+﻿@model TransporteParticular.Models.VeiculoTable
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>VeiculoTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ModeloVeiculo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModeloVeiculo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MarcaVeiculo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MarcaVeiculo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFabricacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataFabricacao)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdVeiculo" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

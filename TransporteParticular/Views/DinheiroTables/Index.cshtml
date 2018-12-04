@@ -1,0 +1,41 @@
+﻿@model IEnumerable<TransporteParticular.Models.DinheiroTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDinheiro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdClienteNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDinheiro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdClienteNavigation.Cpf)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdDinheiro">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdDinheiro">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdDinheiro">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

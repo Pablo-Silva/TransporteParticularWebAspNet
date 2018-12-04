@@ -1,0 +1,71 @@
+﻿@model IEnumerable<TransporteParticular.Models.ClienteTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Cliente</h2>
+
+<p>
+    <a class="btn btn-success" asp-action="Create">Cadastrar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            
+            <th>
+                Sexo
+            </th>
+           
+            <th>
+                Numero Celular
+            </th>
+            <th>
+                Email
+            </th>
+            
+            <th>
+                Data Cadastro
+            </th>
+            <th>
+                Deficiencia
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroCelular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDeficiencia)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.IdCliente">Editar</a> |
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.IdCliente">Mais Detalhes</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.IdCliente">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

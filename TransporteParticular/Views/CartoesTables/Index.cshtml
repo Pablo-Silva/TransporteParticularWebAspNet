@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TransporteParticular.Models.CartoesTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoCartao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BandeiraCartao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroCartao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdClienteNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoCartao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BandeiraCartao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroCartao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdClienteNavigation.Cpf)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdCartoes">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCartoes">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCartoes">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
